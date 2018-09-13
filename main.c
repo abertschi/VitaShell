@@ -106,8 +106,6 @@ static void fileBrowserHandleFile(FileListEntry* file_entry);
 
 static void create_recent_symlink(FileListEntry *file_entry);
 
-static void delete_all_symlink_directory_path();
-
 // escape from dir hierarchy with a symlink
 typedef struct SymlinkDirectoryPath {
   struct SymlinkDirectoryPath* previous;
@@ -130,10 +128,6 @@ static void storeSymlinkPath(SymlinkDirectoryPath * path) {
     symlink_directory_path = path;
     symlink_directory_path->previous = prev;
   }
-}
-
-static void delete_all_symlink_directory_path() {
-
 }
 
 int getDialogStep() {
